@@ -8,7 +8,7 @@ export const About = () => {
             About me
           </h2>
           <div className="rounded-xl p-6 border border-white/40 hover:translate-y-1 transition-all">
-            <p className=" lg sm:text-xl">
+            <p className=" text-lg sm:text-xl">
               Hi! I'am Passitinate front end devoloper who enjoys building
               responsive, user-friendly websites and web pages.
               <br />
@@ -16,7 +16,7 @@ export const About = () => {
               knowledge through the experience i got while building new stuffs.
               <br />
             </p>
-            <p className="xl sm:text-2xl my-2">
+            <p className="text-xl sm:text-2xl my-2">
              
               Always try to learn new things and stuffs causes this path has a
               lot a highs that i want to reach.
@@ -25,12 +25,12 @@ export const About = () => {
 
           <div className=" p-2 gap-6 border border-white/30 my-5 rounded-2xl">
             <div className=" flex flex-wrap rounded-xl p-5 hover:translate-y-1 transition-all">
-              <h3 className="text-3xl sm:text-5xl font-bold mb-5">Skills</h3>
+              <h3 className="text-3xl sm:text-4xl font-bold mb-4">Skills</h3>
               <div className="flex flex-wrap sm:gap-4 gap-2 ">
                 {frontendskill.map((tech, idx) => (
                   <span
                     key={idx}
-                    className="bg-blue-400 text-2xl text-white py-2 mx-1 px-6 rounded-full hover:bg-blue-500/20 
+                    className="bg-blue-600 text-xl sm:text-2xl font-bold text-white py-1 mx-1 px-5 rounded-full hover:bg-blue-500/20 
 hover:shadow-[3px_3px_9px_rgba(59,130,246,0.2)] transition-all"
                   >
                     {tech}

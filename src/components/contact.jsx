@@ -9,14 +9,14 @@ export const Foot = () => {
 
       
         <h2 className="cursor-pointer text-xl my-2 text-center">
-          E mail - kfddk@gamil.com
+          E mail - gautam.jun46@gamil.com
         </h2>
         <div className="flex justify-center items-center gap-4">
-        <a href="#">
+        <a href="https://www.linkedin.com/in/gautam-373bb9305/" target="_blank">
           <img className="w-10 sm:w-12 bg-red-500" src={logo} alt="profile" />
         </a>
         <a href="https://github.com/rookiedev-new" target="_blank">
-          <img className="w-9 sm:w-10 sm:m-1" src={gitImg} alt="git" />
+          <img className="w-9 sm:w-10 sm:m-1" src={gitImg}  alt="git" />
         </a>
         </div>
       

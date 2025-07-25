@@ -40,8 +40,11 @@ export const Project = () => {
           </h3>
 
           <div className="grid  grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-3 font-bold">
-            {project.map((val,id) => (
-              <div  key={id} className="p-4 rounded-xl border border-white/20 hover:translate-y-1 hover:border-blue-500/40 hover:shadow-[4px_6px_4px_rgba(59,130,246,0.2)] transition-all ">
+            {project.map((val, id) => (
+              <div
+                key={id}
+                className="p-4 rounded-xl border border-white/20 hover:translate-y-1 hover:border-blue-500/40 hover:shadow-[4px_6px_4px_rgba(59,130,246,0.2)] transition-all "
+              >
                 <h2 className="text-2xl font-bold">{val.name}</h2>
                 <p>{val.detail}</p>
                 <div className="my-3">
@@ -49,18 +52,24 @@ export const Project = () => {
                     <span
                       key={idx}
                       className="bg-blue-400/10 text-xl  text-blue-400 py-1 mx-2  px-5 rounded-full hover:bg-blue-500/20 
-hover:shadow-[0_3px_9px_rgba(59,130,246,0.2)] transition-all"
+hover:shadow-[5px_5px_8px_rgba(59,130,246,0.2)] transition-all"
                     >
                       {tch}
                     </span>
                   ))}
                 </div>
-                <div className="border text-green-500 rounded-2xl text-lg border-green-50/30 w-21  px-3 my-2
-                hover:shadow-[0_3px_9px_green] transition-all">
-                  <a href={val.code} target="_blank">Source</a>                </div>
+                <div
+                  className="border text-green-500 rounded-2xl text-lg border-green-50/30 w-21  px-3 my-2
+                hover:shadow-[0_3px_9px_green] transition-all"
+                >
+                  <a href={val.code} target="_blank">
+                    Source
+                  </a>{" "}
+                </div>
                 <div>
                   <a
-                    href={val.site} target="_blank"
+                    href={val.site}
+                    target="_blank"
                     className="to-blue-400 hover:text-blue-300 transition-colors"
                   >
                     View Project -
