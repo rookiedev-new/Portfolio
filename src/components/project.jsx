@@ -25,7 +25,7 @@ export const Project = () => {
     {
       name: "Pokedex",
       detail:
-        " hows you different pokemon data like img,typing,abilities and stats by fetch data from (API).",
+        "shows you different pokemon data like img,typing,abilities and stats by fetch data from (API).",
       language: ["React", "Tailwind"],
       code: "https://github.com/rookiedev-new/Poketab-dex",
       site: "https://rookiedev-new.github.io/Poketab-dex/",
