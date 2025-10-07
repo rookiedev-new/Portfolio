@@ -1,18 +1,18 @@
 export const Project = () => {
   const project = [
     {
-      name: "To do List",
-      detail: "A simple to do list that adds your task for you keep track.",
-      language: ["HTML", "CSS", "JS"],
-      code: "https://github.com/rookiedev-new/To-do-list",
-      site: "https://rookiedev-new.github.io/To-do-list/",
-    },
-    {
       name: "Country Finder",
       detail: "Show you the Country data like flag currency etc.",
       language: ["HTML", "CSS", "JS"],
       code: "https://github.com/rookiedev-new/country-finder",
       site: "https://rookiedev-new.github.io/country-finder/",
+    },
+    {
+      name: "Pastry App",
+      detail: "Order your favourite pastry from here.",
+      language: ["React", "Tailwind"],
+      code: "https://github.com/rookiedev-new/Pastry-app",
+      site: "https://rookiedev-new.github.io/Pastry-app/",
     },
     {
       name: "Weather app",
@@ -39,11 +39,15 @@ export const Project = () => {
             Projects
           </h3>
 
-          <div className="grid  grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-3 font-bold">
+          <div className="grid  grid-cols-1 
+          sm:grid-cols-2 gap-4  font-bold">
             {project.map((val, id) => (
               <div
                 key={id}
-                className="p-4 rounded-xl border border-white/20 hover:translate-y-1 hover:border-blue-500/40 hover:shadow-[4px_6px_4px_rgba(59,130,246,0.2)] transition-all "
+                className="p-4  rounded-xl border border-white/20 
+
+                hover:scale-104 hover:translate-y-[-5px]
+                 hover:border-blue-500/40 hover:shadow-[4px_6px_4px_rgba(59,130,246,0.2)] transition-all "
               >
                 <h2 className="text-2xl font-bold">{val.name}</h2>
                 <p>{val.detail}</p>

@@ -23,7 +23,7 @@ export const About = () => {
             </p>
           </div>
 
-          <div className=" p-2 gap-6 border border-white/30 my-5 rounded-2xl">
+          <div className=" p-2 gap-6 border border-white/30 my-5 rounded-2xl hover:scale-105 transition-all duration-300 ease-in">
             <div className=" flex flex-wrap rounded-xl p-5 hover:translate-y-1 transition-all">
               <h3 className="text-3xl sm:text-4xl font-bold mb-4">Skills</h3>
               <div className="flex flex-wrap sm:gap-4 gap-2 ">
