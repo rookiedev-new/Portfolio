@@ -1,47 +1,56 @@
-export const About = () => {
-  const frontendskill = ["HTML", "CSS", "JS", "React", "Tailwind"];
-  return (
-    <section id="about">
-      <div className=" min-h-screen flex justify-center items-center py-16">
-        <div className="max-w-3xl mx-auto px-5">
-          <h2 className="text-4xl sm:text-5xl text-blue-300 font-bold underline my-5 text-center">
-            About me
-          </h2>
-          <div className="rounded-xl p-6 border border-white/40 hover:translate-y-1 transition-all">
-            <p className=" text-lg sm:text-xl">
-              Hi! I'am Passitinate front end devoloper who enjoys building
-              responsive, user-friendly websites and web pages.
-              <br />
-              I'm still working on strengthening my JavaSript and React
-              knowledge through the experience i got while building new stuffs.
-              <br />
-            </p>
-            <p className="text-xl sm:text-2xl my-2">
-             
-              Always try to learn new things and stuffs causes this path has a
-              lot a highs that i want to reach.
-            </p>
-          </div>
+import React from "react";
+import face from "../assets/face.jpg";
 
-          <div className=" p-2 gap-6 border border-white/30 my-5 rounded-2xl hover:scale-105 transition-all duration-300 ease-in">
-            <div className=" flex flex-wrap rounded-xl p-5 hover:translate-y-1 transition-all">
-              <h3 className="text-3xl sm:text-4xl font-bold mb-4">Skills</h3>
-              <div className="flex flex-wrap sm:gap-4 gap-2 ">
-                {frontendskill.map((tech, idx) => (
-                  <span
-                    key={idx}
-                    className="bg-blue-600 text-xl sm:text-2xl font-bold text-white py-1 mx-1 px-5 rounded-full hover:bg-blue-500/20 
-hover:shadow-[3px_3px_9px_rgba(59,130,246,0.2)] transition-all"
-                  >
-                    {tech}
-                  </span>
-                ))}
+const About = () => {
+  return (
+    <section
+      id="about"
+      className="min-h-screen flex  justify-center items-center"
+    >
+      <div className=" w-2xl  mx-auto p-2">
+        <h1
+          className="text-5xl   font-bold
+          py-4 text-center
+         "
+        >
+          About me
+        </h1>
+       
+          <div
+            className="bg-slate-900/60  
+      rounded-2xl border border-purple-200/40 shadow-black mx-auto shadow-xl p-4"
+          >
+            <div className="flex  items-center gap-5  w-fit mx-auto my-2 ">
+              <div
+                className="w-28 h-28 rounded-full bg-gradient-to-br
+           via-purple-600 from-pink-400 to-blue-400  shadow-lg shadow-purple-500/50
+             "
+              >
+                <img className="rounded-full h-28 w-28 p-2" src={face} alt="" />
+              </div>
+              <div className=" text-xl text-gray-300">
+                <h2 className="text-4xl">Gautam</h2>
+                <h2 className="text-purple-500 text-2xl">Frontend Developer</h2>
               </div>
             </div>
-          </div>
+            <div className="text-gray-300 text-xl px-2 py-3">
+              <h1 className="py-3">
+                Hi ,I'm a passionate frontend developer with my self learn
+                experience. I build web applications or pages.
+              </h1>
+
+              <h1>
+                I believe in writing clean, maintainable code and always try to
+                improve my logics. When I'm not coding, I try to find new ideas
+                for projects or learning new frameworks(stuff).
+              </h1>
+              <hr className="w-[95%] mx-auto my-3 opacity-55" />
+            </div>
+       
         </div>
       </div>
     </section>
   );
 };
+
 export default About;

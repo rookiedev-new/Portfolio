@@ -4,64 +4,120 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 w-full z-40  opacity-60 bg-neutral-800 backdrop:blur-lg">
-      <div className="max-w-5xl mx-auto px-3">
-        <div className=" text-center sm:flex justify-between items-center  py-2 sm:py-4">
-          <p className="text-xl font-bold">
-            <span className="text-purple-500  ">Rookie </span> Dev
-          </p>
+    <div className="fixed  top-0 w-full z-40  opacity-85 ">
+      <nav className="flex text-center bg-neutral-900   md:justify-between  text-2xl text-white py-3 px-4">
+        <h1>Rookie Dev</h1>
+        <span
+          className="w-7   fixed  md:hidden z-50 right-1 top-2 cursor-pointer  "
+          onClick={() => setOpen(!open)}
+        >
+          {open ? "X" : "☰"}
+        </span>
 
-          <div
-            className="w-7 h-5 relative  cursor-pointer z-40 sm:hidden ml-auto mr-2"
-            onClick={() => setOpen(!open)}
-          >
-            ☰
-          </div>
+        <ul className="hidden md:flex gap-6 ">
+          <li>
+            <a
+              href="#home"
+              className="hover:text-orange-400  ease-in inline-block hover:scale-110 transition-all transform duration-200"
+              onClick={() => setOpen(!open)}
+            >
+              Home
+            </a>
+          </li>
+           <li>
+            <a
+              href="#about"
+              className="hover:text-orange-400  ease-in inline-block hover:scale-110 transition-all transform duration-200"
+              onClick={() => setOpen(!open)}
+            >
+              About
+            </a>
+          </li>
+          <li>
+            <a
+              href="#project"
+               className="hover:text-orange-400  ease-in inline-block hover:scale-110 transition-all transform duration-200"
+              onClick={() => setOpen(!open)}
+            >
+              Projects
+            </a>
+          </li>
+          <li>
+            <a
+              href="#skill"
+               className="hover:text-orange-400  ease-in inline-block hover:scale-110 transition-all transform duration-200"
+              onClick={() => setOpen(!open)}
+            >
+              Skills
+            </a>
+          </li>
+          <li>
+            <a
+              href="#contact"
+               className="hover:text-orange-400  ease-in inline-block hover:scale-110 transition-all transform duration-200"
+              onClick={() => setOpen(!open)}
+            >
+              Contact
+            </a>
+          </li>
+        </ul>
 
-          <ul className={`sm:flex gap-8 text-lg 
-  overflow-hidden transition-all duration-500 ease-in-out 
-  ${open ? 'max-h-60' : 'max-h-0'} sm:max-h-full  `}>
+        <div
+          className={`absolute right-0 top-0  w-[50vw] md:hidden  pt-[25%]  h-screen
+         ${
+           open ? "translate-x-0" : "translate-x-full"
+         } bg-neutral-900  transition-transform ease-in-out duration-500
+         `}
+        >
+          <ul className="flex flex-col items-center gap-5 text-xl ">
             <li>
               <a
                 href="#home"
-                className="hover:text-orange-400 transition-colors"
-                onClick={()=>setOpen(!open)}
+                className="hover:text-orange-400 transition-all transform inline-block hover:scale-125 duration-300"
+                onClick={() => setOpen(!open)}
               >
                 Home
               </a>
             </li>
+             <li>
+            <a
+              href="#about"
+              className="hover:text-orange-400  ease-in inline-block hover:scale-110 transition-all transform duration-200"
+              onClick={() => setOpen(!open)}
+            >
+              About
+            </a>
+          </li>
             <li>
-              
               <a
                 href="#project"
-                className="hover:text-orange-400 transition-colors"
-                 onClick={()=>setOpen(!open)}
+                     className="hover:text-orange-400 transition-all transform inline-block hover:scale-125 duration-300"
+                onClick={() => setOpen(!open)}
               >
                 Projects
               </a>
             </li>
             <li>
               <a
-                href="#about"
-                className="hover:text-orange-400 transition-colors"
-                 onClick={()=>setOpen(!open)}
+                href="#skill"
+                     className="hover:text-orange-400 transition-all transform inline-block hover:scale-125 duration-300"
+                onClick={() => setOpen(!open)}
               >
-                About
+              Skills
               </a>
             </li>
             <li>
-              
               <a
                 href="#contact"
-                className="hover:text-orange-400 transition-colors"
-                 onClick={()=>setOpen(!open)}
+                     className="hover:text-orange-400 transition-all transform inline-block hover:scale-125 duration-300"
+                onClick={() => setOpen(!open)}
               >
                 Contact
               </a>
             </li>
           </ul>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
   );
 }

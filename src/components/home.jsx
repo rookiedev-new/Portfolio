@@ -1,26 +1,32 @@
+
 export const Home = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center mt-6 "
+      className=" min-h-screen flex items-center justify-center  "
     >
       <div className="text-center px-4">
-        <h1 className="text-4xl sm:text-6xl mb-5">
-          Hi, I'm <span className="text-blue-400 underline">Gautam</span>
+        <h1 className="text-4xl md:text-6xl font-bold mb-6 ">
+          Hi, I am Gautam<br/>
+          Frontend Developer
         </h1>
-        <p className="text-neutral-300  mx-auto xl sm:text-2xl mb-5 max-w-lg">
-          I wanna become a front end deveploper who loves learning and creating web pages.
-          My goal is gain more knowleadge and experience in this feild while
-          also providing the user a good UI (User Interface).
-        </p>
-        <div className="flex justify-center items-center space-x-4">
-          <a
-            href="#project"
-            className="border border-blue-500 text-blue-400 py-3 px-5 sm:text-lg rounded-lg font-bold
-            hover:translate-y-0.5"
+
+       
+
+        <div className="flex flex-wrap justify-center text-lg gap-5">
+          <button
+            className="px-6 py-3 bg-gradient-to-r
+           from-purple-500 to-pink-800 rounded-full font-semibold
+            "
           >
             View Projects
-          </a>
+          </button>
+          <button
+            className="px-6 py-3 border-2 border-purple-400 rounded-full font-semibold
+           hover:bg-purple-400/30 transition-all"
+          >
+            Contact Me
+          </button>
         </div>
       </div>
     </section>
