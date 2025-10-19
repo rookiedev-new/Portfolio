@@ -11,21 +11,23 @@ export const Home = () => {
           Frontend Developer
         </h1>
 
-       
-
         <div className="flex flex-wrap justify-center text-lg gap-5">
+           
           <button
             className="px-6 py-3 bg-gradient-to-r
            from-purple-500 to-pink-800 rounded-full font-semibold
             "
-          >
-            View Projects
+          > 
+          <a href="#project">
+         View Projects
+         </a>
           </button>
+        
           <button
             className="px-6 py-3 border-2 border-purple-400 rounded-full font-semibold
            hover:bg-purple-400/30 transition-all"
           >
-            Contact Me
+           <a href="#contact"> Contact Me</a>
           </button>
         </div>
       </div>
