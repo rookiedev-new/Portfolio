@@ -59,7 +59,7 @@ imagelink:pic4,
                 </div>
                 <h2 className="text-2xl mt-2 font-bold">{val.name}</h2>
                 <p>{val.detail}</p>
-                <div className="my-3">
+                <div className="my-3 flex gap-2 flex-wrap">
                   {val.language.map((tch, idx) => (
                     <span
                       key={idx}
