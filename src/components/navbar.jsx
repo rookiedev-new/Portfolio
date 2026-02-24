@@ -1,123 +1,65 @@
 import React, { useState } from "react";
+import { Menu, X } from "lucide-react";
 
-export default function Navbar() {
-  const [open, setOpen] = useState(false);
+const Navbar = () => {
+  const bar = ["home", "about", "skills", "projects", "contact"];
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    element?.scrollIntoView({ behavior: "smooth" });
+    setIsMenuOpen(false);
+  };
   return (
-    <div className="fixed  top-0 w-full z-40  opacity-85 ">
-      <nav className="flex text-center bg-neutral-900   md:justify-between  text-2xl text-white py-3 px-4">
-        <h1>Rookie Dev</h1>
-        <span
-          className="w-7   fixed  md:hidden z-50 right-1 top-2 cursor-pointer  "
-          onClick={() => setOpen(!open)}
-        >
-          {open ? "X" : "☰"}
-        </span>
+    <nav className="fixed w-full bg-slate-900/95 backdrop-blur-sm z-50 shadow-lg">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          <div className="text-2xl font-bold text-transparent bg-clip-text bg-linear-to-r from-purple-400 to-pink-600">
+            Portfolio
+          </div>
 
-        <ul className="hidden md:flex gap-6 ">
-          <li>
-            <a
-              href="#home"
-              className="hover:text-orange-400  ease-in inline-block hover:scale-110 transition-all transform duration-200"
-              onClick={() => setOpen(!open)}
-            >
-              Home
-            </a>
-          </li>
-           <li>
-            <a
-              href="#about"
-              className="hover:text-orange-400  ease-in inline-block hover:scale-110 transition-all transform duration-200"
-              onClick={() => setOpen(!open)}
-            >
-              About
-            </a>
-          </li>
-          <li>
-            <a
-              href="#project"
-               className="hover:text-orange-400  ease-in inline-block hover:scale-110 transition-all transform duration-200"
-              onClick={() => setOpen(!open)}
-            >
-              Projects
-            </a>
-          </li>
-          <li>
-            <a
-              href="#skill"
-               className="hover:text-orange-400  ease-in inline-block hover:scale-110 transition-all transform duration-200"
-              onClick={() => setOpen(!open)}
-            >
-              Skills
-            </a>
-          </li>
-          <li>
-            <a
-              href="#contact"
-               className="hover:text-orange-400  ease-in inline-block hover:scale-110 transition-all transform duration-200"
-              onClick={() => setOpen(!open)}
-            >
-              Contact
-            </a>
-          </li>
-        </ul>
+          {/* Desktop Menu */}
+          <div className="hidden md:flex space-x-8">
+            {bar.map((itm,id) => (
+              <button key={id}
+                onClick={() => scrollToSection(itm)}
+                className="text-gray-300 hover:text-purple-400 transition"
+              >
+                {itm.charAt(0).toUpperCase() + itm.slice(1)}
+              </button>
+            ))}
+          </div>
 
-        <div
-          className={`absolute right-0 top-0  w-[50vw] md:hidden  pt-[25%]  h-screen
-         ${
-           open ? "translate-x-0" : "translate-x-full"
-         } bg-neutral-900  transition-transform ease-in-out duration-500
-         `}
-        >
-          <ul className="flex flex-col items-center gap-5 text-xl ">
-            <li>
-              <a
-                href="#home"
-                className="hover:text-orange-400 transition-all transform inline-block hover:scale-125 duration-300"
-                onClick={() => setOpen(!open)}
-              >
-                Home
-              </a>
-            </li>
-             <li>
-            <a
-              href="#about"
-              className="hover:text-orange-400  ease-in inline-block hover:scale-110 transition-all transform duration-200"
-              onClick={() => setOpen(!open)}
+          {/* Mobile Menu Button */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-gray-300"
             >
-              About
-            </a>
-          </li>
-            <li>
-              <a
-                href="#project"
-                     className="hover:text-orange-400 transition-all transform inline-block hover:scale-125 duration-300"
-                onClick={() => setOpen(!open)}
-              >
-                Projects
-              </a>
-            </li>
-            <li>
-              <a
-                href="#skill"
-                     className="hover:text-orange-400 transition-all transform inline-block hover:scale-125 duration-300"
-                onClick={() => setOpen(!open)}
-              >
-              Skills
-              </a>
-            </li>
-            <li>
-              <a
-                href="#contact"
-                     className="hover:text-orange-400 transition-all transform inline-block hover:scale-125 duration-300"
-                onClick={() => setOpen(!open)}
-              >
-                Contact
-              </a>
-            </li>
-          </ul>
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
-      </nav>
-    </div>
+      </div>
+
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <div className="md:hidden bg-slate-800">
+          <div className="px-2 pt-2 pb-3 space-y-1">
+           
+            {bar.map((itm,id) => (
+              <button key={id}
+                onClick={() => scrollToSection(itm)}
+                className="block  w-full text-left px-3 py-2  text-gray-300 hover:text-purple-400 cursor-pointer"
+              >
+                {itm.charAt(0).toUpperCase() + itm.slice(1)}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+    </nav>
   );
-}
+};
+
+export default Navbar;

@@ -1,20 +1,22 @@
 import Navbar from "./components/navbar";
 import Home from "./components/home";
-import Project from "./components/project";
 import About from "./components/about";
+import Project from "./components/project";
 import Skill from "./components/skill";
-import Foot from "./components/contact";
+import Footer from "./components/footer";
+
+import Contact from "./components/contact";
 
 function App() {
   return (
-    <div className="bg-gradient-to-br from-slate-950 via-purple-900 via-30% to-pink-700 to-90%">
+    <div className="min-h-screen [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]">
       <Navbar />
-
       <Home />
-      <About/>
-      <Project />
+      <About />
       <Skill />
-      <Foot />
+      <Project />
+      <Contact />
+      <Footer />
     </div>
   );
 }

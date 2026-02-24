@@ -1,35 +1,31 @@
-
 export const Home = () => {
+   const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    element?.scrollIntoView({ behavior: 'smooth' });
+    setIsMenuOpen(false);
+   };
   return (
+    
     <section
       id="home"
-      className=" min-h-screen flex items-center justify-center  "
+      className="min-h-screen flex items-center justify-center px-4 pt-10"
     >
-      <div className="text-center px-4">
-        <h1 className="text-4xl md:text-6xl font-bold mb-6 ">
-          Hi, I am Gautam<br/>
-          Frontend Developer
+      <div className="text-center">
+        <h1 className="text-5xl md:text-7xl font-bold text-white mb-4">
+          Hi, I'm
+          <span className="text-transparent bg-clip-text bg-linear-to-r pl-3 from-purple-400 to-pink-600">
+            Gautam
+          </span>
         </h1>
-
-        <div className="flex flex-wrap justify-center text-lg gap-5">
-           
-          <button
-            className="px-6 py-3 bg-gradient-to-r
-           from-purple-500 to-pink-800 rounded-full font-semibold
-            "
-          > 
-          <a href="#project">
-         View Projects
-         </a>
-          </button>
-        
-          <button
-            className="px-6 py-3 border-2 border-purple-400 rounded-full font-semibold
-           hover:bg-purple-400/30 transition-all"
-          >
-           <a href="#contact"> Contact Me</a>
-          </button>
-        </div>
+        <p className="text-xl md:text-2xl text-gray-300 mb-8">
+          MERN Stack Developer
+        </p>
+        <button
+          onClick={() => scrollToSection("contact")}
+          className="bg-linear-120 from-purple-500 to-pink-900 text-white px-8 py-3 rounded-full font-bold hover:shadow-lg hover:shadow-purple-500/50 transition transform hover:scale-105"
+        >
+          Get In Touch
+        </button>
       </div>
     </section>
   );

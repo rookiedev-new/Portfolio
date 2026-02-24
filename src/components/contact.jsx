@@ -1,32 +1,53 @@
-import gitImg from "../assets/git.png";
-import logo from "../assets/linkdin.jpg";
-export const Foot = () => {
+import { Github, Linkedin, Mail } from "lucide-react";
+function Contact() {
   return (
-    <footer id="contact" className="h-auto bg-black opacity-90 p-3 ">
-        <div className="flex flex-wrap justify-center  items-center gap-2">
-        <h2 className="cursor-pointer text-xl my-2 text-center">
-          E mail- gautam.jun46@gamil.com
+    <section
+      id="contact"
+      className="min-h-screen flex items-center justify-center px-4 py-20"
+    >
+      <div className="max-w-2xl w-full">
+        <h2 className="text-4xl md:text-5xl font-bold text-white mb-12 text-center">
+          Get In Touch
         </h2>
-        <div className="flex  gap-3">
-        <div className=" w-11 rounded-full border-2 p-0.5">
-        <a href="https://www.linkedin.com/in/gautam-373bb9305/" target="_blank">
-          <img className="w-10 rounded-full" src={logo} alt="profile" />
-        </a>
+        <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 shadow-xl">
+          <p className="text-gray-300 text-center mb-8 text-lg">
+            I'm always open to new opportunities. Feel free to reach out!
+          </p>
+          <div className="space-y-4">
+            <div className="flex items-center gap-4 p-4 bg-slate-700/50 rounded-lg hover:bg-slate-700 transition">
+              <Mail className="text-purple-400" size={24} />
+              <div>
+                <p className="text-gray-400 text-sm">Email</p>
+                <p className="text-white">gautam.jun46@gamil.com</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-4 p-4 bg-slate-700/50 rounded-lg hover:bg-slate-700 transition">
+              <Github className="text-purple-400" size={24} />
+              <div>
+                <p className="text-gray-400 text-sm">GitHub</p>
+                <p className="text-white">github.com/rookiedev-new</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-4 p-4 bg-slate-700/50 rounded-lg hover:bg-slate-700 transition">
+              <Linkedin className="text-purple-400" size={24} />
+              <div>
+                <p className="text-gray-400 text-sm"> LinkedIn</p>
+                <p className="text-white text-sm underline">
+                  {" "}
+                  <a
+                    href="https://www.linkedin.com/in/gautam-373bb9305/"
+                    target="_blank"
+                  >
+                    Go to Linkeddin{" "}
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className=" w-12  rounded-full p-2 border-2 ">
-        <a href="https://github.com/rookiedev-new" target="_blank">
-          <img className="w-10" src={gitImg}  alt="git" />
-        </a>
-        </div>
-        </div>
-        <hr/>
-       
-        </div>
-        <hr className="my-2 w-[70vw] opacity-35 mx-auto"/>
-        <p className="text-center">
-          © 2025 MyPortfolio. Built with React | All rights reserved</p>
-      
-    </footer>
+      </div>
+    </section>
   );
-};
-export default Foot;
+}
+
+export default Contact;
